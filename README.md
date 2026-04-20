@@ -1,1 +1,1 @@
-# SmartAlarm-Privacy
+# XingKe-Privacy
