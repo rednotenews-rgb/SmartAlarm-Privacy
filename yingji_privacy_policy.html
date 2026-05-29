@@ -12,6 +12,10 @@
     p, li { font-size: 15px; color: #3a3a3c; }
     ul { padding-left: 20px; }
     .highlight { background: #f2f2f7; border-left: 4px solid #9B8FC4; padding: 14px 18px; border-radius: 8px; margin: 16px 0; }
+    .warning { background: #fff3cd; border-left: 4px solid #ffc107; padding: 14px 18px; border-radius: 8px; margin: 16px 0; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th, td { border: 1px solid #e5e5ea; padding: 10px 14px; text-align: left; }
+    th { background: #f2f2f7; font-weight: 600; }
     footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #e5e5ea; font-size: 13px; color: #8e8e93; }
   </style>
 </head>
@@ -19,47 +23,107 @@
   <h1>隐私政策 <span class="badge">AI 本地运行</span></h1>
   <p><strong>适用应用：</strong>映集 (Lensify)<br>
      <strong>开发者：</strong>luluxjj<br>
-     <strong>生效日期：</strong>2026 年 5 月 21 日<br>
+     <strong>生效日期：</strong>2026 年 5 月 29 日<br>
      <strong>联系邮箱：</strong>luluxjj@163.com</p>
 
   <div class="highlight">
-    <strong>🔒 核心承诺：</strong>映集的 AI 图像搜索与识别完全在设备本地运行（深度 AI）。我们不向任何服务器上传照片，不收集用户数据，不含广告追踪。
+    <strong>🔒 核心承诺：</strong>映集的所有 AI 图像分析、搜索与识别功能完全在设备本地运行。我们不向任何服务器上传照片或分析结果，不收集用户数据，不含广告追踪，不使用任何第三方 AI 服务。
   </div>
 
   <h2>一、我们访问哪些数据？</h2>
+  <p>在您授权后，映集会访问您的照片库以提供以下功能：</p>
+  <table>
+    <tr>
+      <th>功能</th>
+      <th>访问内容</th>
+      <th>处理方式</th>
+    </tr>
+    <tr>
+      <td>AI 场景分类与智能标签</td>
+      <td>照片像素内容</td>
+      <td>使用 Apple Vision 框架在本地分析，生成场景标签（如风景、美食、人物等）</td>
+    </tr>
+    <tr>
+      <td>人脸检测</td>
+      <td>照片像素内容</td>
+      <td>使用 Apple Vision 框架在本地检测人脸矩形区域，仅存储人脸数量（整数）</td>
+    </tr>
+    <tr>
+      <td>文字识别 (OCR)</td>
+      <td>照片像素内容</td>
+      <td>使用 Apple Vision 框架在本地提取照片中的文字内容</td>
+    </tr>
+    <tr>
+      <td>语义搜索</td>
+      <td>照片像素内容</td>
+      <td>使用 CoreML 模型 (CN-CLIP) 在本地生成特征向量，支持自然语言搜索照片</td>
+    </tr>
+    <tr>
+      <td>AI 照片描述</td>
+      <td>照片像素内容</td>
+      <td>使用 CoreML 模型 (Gemma) 在本地生成照片的文字描述</td>
+    </tr>
+    <tr>
+      <td>相似照片分组</td>
+      <td>照片像素内容</td>
+      <td>使用 Apple Vision 框架在本地计算照片相似度特征</td>
+    </tr>
+  </table>
+  <p><strong>所有上述处理均在设备本地通过 Apple Neural Engine 离线完成。照片从不离开您的设备。</strong></p>
+
+  <h2>二、人脸检测数据</h2>
+  <div class="warning">
+    <strong>⚠️ 重要说明：</strong>映集不进行面部识别 (Face Recognition)，仅进行人脸检测 (Face Detection)。两者有本质区别。
+  </div>
   <ul>
-    <li><strong>照片库：</strong>您授权后，应用读取照片进行本地 AI 向量索引，用于语义搜索与智能分类。照片<strong>从不离开您的设备</strong>。</li>
-    <li><strong>AI 向量索引：</strong>从照片提取的特征向量（非照片原文件）存储在设备本地，供搜索使用。</li>
+    <li><strong>检测方式：</strong>使用 Apple Vision 框架 (VNDetectFaceRectanglesRequest) 检测照片中的人脸矩形区域。这是 Apple 提供的系统级 API，不是第三方服务。</li>
+    <li><strong>存储内容：</strong>仅存储每张照片中检测到的<strong>人脸数量</strong>（一个整数，如 0、1、3），<strong>不存储</strong>任何面部特征 (facial features)、面部标志点 (facial landmarks)、面部编码或生物识别标识符 (biometric identifiers)。</li>
+    <li><strong>使用目的：</strong>用于自动为照片添加分类标签——"单人"、"多人"、"自拍"、"合照"等，方便用户按人数筛选和搜索照片。</li>
+    <li><strong>存储位置：</strong>人脸数量数据以 JSON 文件形式存储在应用沙盒 (App Sandbox) 的本地 Documents 目录中。</li>
+    <li><strong>数据共享：</strong>❌ 人脸数据<strong>绝不会</strong>通过网络传输或分享给任何第三方。</li>
+    <li><strong>数据保留：</strong>数据在应用安装期间保留。用户可在应用"设置"页面随时清除所有 AI 分析缓存。卸载应用时，所有数据随应用沙盒自动删除。</li>
   </ul>
 
-  <h2>二、我们如何使用数据？</h2>
+  <h2>三、我们如何使用数据？</h2>
+  <p>映集使用以下<strong>完全本地运行</strong>的 AI 模型处理您的照片，不涉及任何网络请求或第三方 AI 服务：</p>
   <ul>
-    <li>照片内容仅用于生成本地 AI 特征向量，实现"用文字找照片"的语义搜索功能。</li>
-    <li>所有推理（深度 AI 模型）均在设备 Neural Engine 上运行，无网络请求。</li>
-    <li>本地索引缓存可在应用设置中随时清除。</li>
+    <li><strong>VNClassifyImageRequest</strong>（Apple Vision 框架）— 场景与物体分类</li>
+    <li><strong>VNDetectFaceRectanglesRequest</strong>（Apple Vision 框架）— 人脸检测（仅数量）</li>
+    <li><strong>VNRecognizeTextRequest</strong>（Apple Vision 框架）— 文字识别 (OCR)</li>
+    <li><strong>VNGenerateImageFeaturePrintRequest</strong>（Apple Vision 框架）— 相似照片检测</li>
+    <li><strong>CN-CLIP</strong>（CoreML 模型，内嵌于 App）— 中文语义搜索</li>
+    <li><strong>Gemma</strong>（CoreML 模型，可选下载）— AI 照片描述生成</li>
+  </ul>
+  <p>以上模型全部在设备本地的 Apple Neural Engine (NPU) 上运行。应用唯一的网络请求是向 Apple 官方 iTunes API 查询应用更新信息。</p>
+
+  <h2>四、数据保留与清除</h2>
+  <ul>
+    <li>所有 AI 分析结果（标签、人脸数量、特征向量、OCR 文字、照片描述）均以缓存文件形式存储在应用沙盒的本地目录中。</li>
+    <li>用户可在应用的<strong>"设置"</strong>页面随时<strong>一键清除</strong>所有 AI 分析缓存。</li>
+    <li>卸载应用时，所有缓存数据随应用沙盒自动删除，无任何残留。</li>
   </ul>
 
-  <h2>三、Pro 订阅</h2>
+  <h2>五、Pro 订阅</h2>
   <ul>
     <li>Pro 功能通过 Apple 官方 StoreKit 框架处理，付款信息由 Apple 管理，我们无法访问您的支付详情。</li>
     <li>购买记录存储在您的 Apple ID 账号下，我们不保存任何付款数据。</li>
   </ul>
 
-  <h2>四、我们分享数据给第三方吗？</h2>
-  <p>❌ 不。无广告 SDK，无分析追踪，无任何数据出境。</p>
+  <h2>六、我们分享数据给第三方吗？</h2>
+  <p>❌ <strong>不。</strong>映集不包含任何广告 SDK、分析追踪 SDK 或第三方数据收集工具。用户的照片、AI 分析结果及任何个人数据均不会被传输至任何外部服务器或第三方。</p>
 
-  <h2>五、儿童隐私</h2>
+  <h2>七、儿童隐私</h2>
   <p>本应用不面向 13 岁以下儿童，不会有意收集儿童个人信息。</p>
 
-  <h2>六、政策变更</h2>
+  <h2>八、政策变更</h2>
   <p>政策更新时将在应用内通知，并在本页面更新生效日期。</p>
 
-  <h2>七、联系我们</h2>
+  <h2>九、联系我们</h2>
   <p>📧 <a href="mailto:luluxjj@163.com">luluxjj@163.com</a></p>
 
   <footer>
     <p>© 2026 luluxjj. 映集 (Lensify). 保留所有权利。</p>
-    <p>本政策最后更新于 2026 年 5 月 21 日。</p>
+    <p>本政策最后更新于 2026 年 5 月 29 日。</p>
   </footer>
 </body>
 </html>
