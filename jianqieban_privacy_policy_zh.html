@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 - ClipAI 剪切板管理助手</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+            background: #0a0a0f;
+            color: #e2e8f0;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 24px; }
+        .header { text-align: center; margin-bottom: 60px; }
+        .app-icon {
+            width: 80px; height: 80px; border-radius: 18px;
+            background: linear-gradient(135deg, #6C63FF, #F472B6, #22D3EE);
+            margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;
+            font-size: 36px;
+        }
+        h1 { font-size: 32px; font-weight: 700; color: #f8fafc; margin-bottom: 8px; }
+        .subtitle { color: #64748b; font-size: 14px; }
+        .updated { color: #94a3b8; font-size: 13px; margin-top: 8px; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(108,99,255,0.1), rgba(244,114,182,0.1));
+            border: 1px solid rgba(108,99,255,0.2);
+            border-radius: 16px; padding: 24px 28px; margin: 40px 0;
+            display: flex; align-items: flex-start; gap: 16px;
+        }
+        .highlight-box .icon { font-size: 32px; flex-shrink: 0; }
+        .highlight-box h2 { font-size: 18px; font-weight: 600; color: #a78bfa; margin-bottom: 8px; }
+        .highlight-box p { color: #94a3b8; font-size: 15px; }
+
+        section { margin: 40px 0; }
+        h2.section-title {
+            font-size: 20px; font-weight: 600; color: #f8fafc;
+            margin-bottom: 16px; padding-bottom: 10px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        p { color: #94a3b8; margin-bottom: 12px; }
+        ul { color: #94a3b8; padding-left: 20px; margin-bottom: 12px; }
+        ul li { margin-bottom: 6px; }
+        ul li::marker { color: #6C63FF; }
+
+        .table-container { overflow-x: auto; margin: 16px 0; }
+        table { width: 100%; border-collapse: collapse; }
+        th {
+            background: rgba(108,99,255,0.15); color: #a78bfa;
+            font-size: 13px; text-align: left;
+            padding: 12px 16px; font-weight: 600;
+        }
+        td { padding: 12px 16px; color: #94a3b8; font-size: 14px; }
+        tr { border-bottom: 1px solid rgba(255,255,255,0.05); }
+        tr:hover { background: rgba(255,255,255,0.02); }
+        .badge {
+            display: inline-block; padding: 2px 10px;
+            border-radius: 100px; font-size: 12px; font-weight: 500;
+        }
+        .badge-none { background: rgba(52,211,153,0.12); color: #34d399; }
+        .badge-local { background: rgba(96,165,250,0.12); color: #60a5fa; }
+
+        .contact-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 24px 28px; margin-top: 16px;
+        }
+        .contact-card a { color: #6C63FF; text-decoration: none; }
+        .contact-card a:hover { text-decoration: underline; }
+
+        footer {
+            text-align: center; margin-top: 80px; padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: #475569; font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="app-icon">📋</div>
+        <h1>隐私政策</h1>
+        <p class="subtitle">ClipAI - 剪切板管理助手</p>
+        <p class="updated">最后更新：2026 年 5 月 3 日 &nbsp;|&nbsp; 生效日期：2026 年 5 月 3 日</p>
+    </div>
+
+    <div class="highlight-box">
+        <div class="icon">🔒</div>
+        <div>
+            <h2>一句话总结</h2>
+            <p>ClipAI 不收集、不上传、不出售任何您的个人数据。所有数据均存储在您的设备本地，从不连接任何服务器。</p>
+        </div>
+    </div>
+
+    <section>
+        <h2 class="section-title">1. 信息收集</h2>
+        <p>ClipAI（以下简称"本应用"）不收集任何形式的个人信息。具体而言：</p>
+        <ul>
+            <li>❌ 不收集设备标识符（IDFA、IDFV 等）</li>
+            <li>❌ 不收集位置信息</li>
+            <li>❌ 不收集联系人或通讯录信息</li>
+            <li>❌ 不收集使用行为数据或分析数据</li>
+            <li>❌ 不收集崩溃日志或诊断数据（上传至第三方）</li>
+            <li>❌ 不使用任何第三方 SDK 或分析框架</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">2. 数据存储方式</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>数据类型</th>
+                        <th>存储位置</th>
+                        <th>是否上传云端</th>
+                        <th>第三方访问</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>剪切板历史记录</td>
+                        <td>设备本地 SwiftData</td>
+                        <td><span class="badge badge-none">❌ 不上传</span></td>
+                        <td><span class="badge badge-none">无</span></td>
+                    </tr>
+                    <tr>
+                        <td>快捷短语模板</td>
+                        <td>设备本地 SwiftData</td>
+                        <td><span class="badge badge-none">❌ 不上传</span></td>
+                        <td><span class="badge badge-none">无</span></td>
+                    </tr>
+                    <tr>
+                        <td>应用设置</td>
+                        <td>设备本地 UserDefaults</td>
+                        <td><span class="badge badge-none">❌ 不上传</span></td>
+                        <td><span class="badge badge-none">无</span></td>
+                    </tr>
+                    <tr>
+                        <td>OCR 识别结果</td>
+                        <td>设备内存（即时处理）</td>
+                        <td><span class="badge badge-none">❌ 不上传</span></td>
+                        <td><span class="badge badge-none">无</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">3. 系统权限申请</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>权限</th>
+                        <th>用途</th>
+                        <th>是否必须</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>📷 相册访问</td>
+                        <td>仅用于 OCR 功能——您主动选择图片时进行文字识别</td>
+                        <td>否（可选）</td>
+                    </tr>
+                    <tr>
+                        <td>🔒 Face ID / Touch ID</td>
+                        <td>可选的应用锁定功能，验证数据仅在本机 Secure Enclave 处理</td>
+                        <td>否（可选）</td>
+                    </tr>
+                    <tr>
+                        <td>📋 剪切板访问</td>
+                        <td>在您主动点击"捕获"按钮时读取剪切板内容</td>
+                        <td>是（核心功能）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>⚠️ 重要说明：本应用不会在后台自动读取剪切板，仅在您主动触发操作时读取。</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">4. 网络访问</h2>
+        <p>ClipAI <strong>不需要也不请求任何网络权限</strong>。所有功能均在完全离线状态下运行：</p>
+        <ul>
+            <li>AI 文本分析：使用 Apple NaturalLanguage 框架（设备本地）</li>
+            <li>OCR 文字识别：使用 Apple Vision 框架（设备本地）</li>
+            <li>生物识别验证：使用 Apple LocalAuthentication 框架（设备本地）</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">5. 数据删除</h2>
+        <p>您对本地数据拥有完全控制权：</p>
+        <ul>
+            <li>随时在应用内"设置 → 清除所有记录"删除全部剪切板历史</li>
+            <li>删除本应用即可永久删除所有相关数据</li>
+            <li>数据自动清理功能支持 7 / 30 / 90 天自定义周期</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">6. 儿童隐私</h2>
+        <p>本应用不专门面向 13 岁以下儿童，且不收集任何用户数据，因此无儿童隐私风险。</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">7. 隐私政策变更</h2>
+        <p>如本政策发生重大变更，我们将通过应用内通知或更新应用说明的方式告知您。继续使用本应用即表示您同意更新后的政策。</p>
+    </section>
+
+    <section>
+        <h2 class="section-title">8. 联系我们</h2>
+        <p>如您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
+        <div class="contact-card">
+            <p>📧 开发者邮箱：<a href="mailto:support@clipai.app">support@clipai.app</a></p>
+            <p>🌐 应用主页：<a href="https://clipai.app" target="_blank">https://clipai.app</a></p>
+            <p>📍 开发者：Individual Developer</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ClipAI. All rights reserved.</p>
+        <p style="margin-top: 8px;">本隐私政策受苹果 App Store 审核委员会认可的格式约束</p>
+    </footer>
+</div>
+</body>
+</html>
