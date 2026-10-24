@@ -3,114 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>挂机人生 - 隐私政策</title>
+    <title>观复 Prescia - 隐私政策 / Privacy Policy</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             line-height: 1.8;
-            color: #333;
+            color: #2a2a2a;
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
-            background: #fafafa;
+            background: #F2F1ED;
         }
-        h1 { font-size: 28px; margin-bottom: 8px; color: #1a1a1a; }
-        h2 { font-size: 20px; margin-top: 32px; margin-bottom: 12px; color: #1a1a1a; }
+        h1 { font-size: 28px; margin-bottom: 8px; color: #141414; }
+        h2 { font-size: 20px; margin-top: 32px; margin-bottom: 12px; color: #141414; }
         p { margin-bottom: 16px; }
+        ul, ol { margin: 0 0 16px 22px; }
+        li { margin-bottom: 6px; }
         .update-date { color: #666; font-size: 14px; margin-bottom: 32px; }
-        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-        th, td { padding: 10px 12px; text-align: left; border: 1px solid #ddd; }
-        th { background: #f0f0f0; font-weight: 600; }
-        .highlight { background: #e8f5e9; padding: 16px; border-radius: 8px; margin: 16px 0; }
-        .highlight strong { color: #2e7d32; }
-        .lang-switch { text-align: right; margin-bottom: 20px; }
-        .lang-switch a { color: #007aff; text-decoration: none; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 15px; }
+        th, td { padding: 10px 12px; text-align: left; border: 1px solid #d6d5d0; vertical-align: top; }
+        th { background: #e7e6e1; font-weight: 600; }
+        .highlight { background: #e7e6e1; padding: 16px; border-radius: 8px; margin: 16px 0; }
+        .highlight strong { color: #141414; }
+        .lang-switch { text-align: right; margin-bottom: 20px; font-size: 15px; }
+        .lang-switch a { color: #141414; }
+        a { color: #141414; }
+        hr { margin: 48px 0; border: none; border-top: 1px solid #d6d5d0; }
+        @media (prefers-color-scheme: dark) {
+            body { background: #0A0A0B; color: #d8d8d6; }
+            h1, h2, a, .lang-switch a, .highlight strong { color: #E8E8E6; }
+            th { background: #1c1c1e; }
+            th, td { border-color: #333; }
+            .highlight { background: #1c1c1e; }
+            .update-date { color: #999; }
+            hr { border-top-color: #333; }
+        }
     </style>
 </head>
 <body>
-    <div class="lang-switch"><a href="#english">English Version ↓</a></div>
+    <div class="lang-switch"><a href="#zh" lang="zh-CN">简体中文</a> · <a href="#en" lang="en">English</a></div>
 
+    <!-- ===================== 简体中文 ===================== -->
+    <section id="zh" lang="zh-CN">
     <h1>隐私政策</h1>
-    <p class="update-date">最后更新：2026 年 7 月 5 日</p>
+    <p class="update-date">生效日期：2026 年 10 月 24 日　最后更新：2026 年 10 月 24 日</p>
 
     <h2>概述</h2>
-    <p>「挂机人生」（以下简称"本应用"）是一款完全离线运行的人生记录应用。我们高度重视你的隐私。本应用的设计原则是：你的数据只属于你自己。</p>
+    <p>「观复」（英文名 Prescia，原名「挂机人生」，以下简称"本应用"）是一款在设备端运行的个人观察与推演应用。本应用的设计原则是：你的数据只属于你自己。</p>
 
     <h2>数据收集</h2>
     <div class="highlight">
-        <strong>本应用不收集、不传输、不存储任何用户数据到任何服务器。</strong>
+        <strong>本应用不收集用户数据，也不会把任何用户数据传输或存储到开发者的服务器或任何第三方服务器。</strong>本应用没有账户系统，没有广告，不做追踪，也没有开发者自己的服务器。
     </div>
-    <p>所有数据（包括个人档案、记录、照片、视频、语音、统计信息等）均仅保存在你的设备本地存储中。</p>
+    <p>默认情况下，所有数据（包括个人档案、记录、长期记忆、照片、视频、语音、统计信息等）均仅保存在你的设备本地存储中。</p>
+
+    <h2>iCloud 同步（可选，默认关闭）</h2>
+    <p>你可以在「更多 › 数据与备份 › iCloud 同步」中自行开启 iCloud 同步，以便在登录同一 Apple 账户的 iPhone / iPad 之间同步数据。开启后：</p>
+    <ul>
+        <li>个人档案、记录、属性、维度、目标、排程、地点、鼓励语与长期记忆存储在你自己的 iCloud <strong>私有数据库</strong>（Apple CloudKit）中；照片、视频、语音与实况照片文件存储在本应用的 iCloud 云盘容器中。这些数据只存在于你的 Apple 账户下，由 Apple 依据其隐私政策保管，开发者无法访问，也不经过任何开发者服务器；</li>
+        <li>应用设置（主题、通知、应用锁等）、系统数据源授权状态、语义搜索索引与统计缓存始终只保存在本机，不会同步；</li>
+        <li>从「健康」（HealthKit）读取的数据<strong>不会</strong>存入 iCloud：同步开启期间暂停健康导入，已导入的健康记录只保存在本机暂存区；关闭同步后恢复显示，并从「健康」补齐暂停期间的数据；</li>
+        <li>你可以随时关闭同步。关闭后本机保留全部数据；已存入 iCloud 的数据不会被自动删除，你可以在系统「设置 › Apple 账户 › iCloud › 管理储存空间」中删除。</li>
+    </ul>
+
+    <h2>长期记忆</h2>
+    <p>本应用会在设备端从你的记录与对话中整理出关于你的事实、偏好与习惯（"记忆"），用于偏离检测、推演与 AI 叙述。记忆默认仅保存在你的设备本地，仅当你开启 iCloud 同步时同步到你自己的 iCloud 私有数据库，不会上传到开发者服务器。你可以在应用内随时查看、修改、删除任意一条记忆，清除全部记忆，或关闭记忆学习；删除应用将同时永久删除本机上的全部记忆。</p>
+
+    <h2>偏离检测与推演</h2>
+    <p>偏离检测与推演（趋势推演、目标达成概率、习惯延续）均在设备端，仅使用你自己的历史记录计算，不与任何他人数据比较，计算结果不上传。推演为统计估计，不构成任何专业建议。</p>
 
     <h2>网络访问</h2>
-    <p>本应用的所有功能（包括 AI 自然语言解析、统计计算、报告生成）与全部数据处理均在设备端本地完成，不会将你的任何个人数据上传到我们的服务器或任何第三方。</p>
-    <p>存在以下两种由系统框架发起的网络行为，均不涉及我们的服务器，也不用于分析或追踪：</p>
-    <p>1. <strong>AI 模型下载</strong>：当你首次启用设备端 AI 功能时，应用会通过 Apple 的按需资源（On-Demand Resources）从 Apple 的内容分发网络一次性下载本地 AI 模型权重文件。该下载不包含也不发送你的任何个人数据；下载完成后，模型推理全程离线运行。若你不使用 AI 功能，则不会发起该下载。</p>
-    <p>2. <strong>地名解析</strong>：当你使用地理围栏并需要将坐标显示为地名时，应用会调用 Apple 的系统定位服务（CLGeocoder）进行反向地理编码，仅向 Apple 传输坐标以换取地名，不包含身份信息，结果仅存设备本地。</p>
+    <p>本应用的所有功能（包括 AI 对话记录、自然语言解析、记忆整理、偏离检测、推演、统计计算、语义搜索）以及全部数据处理均在设备端本地完成，不会将你的任何个人数据上传到我们的服务器或任何第三方。</p>
+    <p>存在以下由系统框架发起的网络行为，均不涉及我们的服务器，也不用于分析或追踪：</p>
+    <ol>
+        <li><strong>AI 模型下载</strong>：当你首次启用设备端 AI 功能时，应用会通过 Apple 的按需资源（On-Demand Resources）从 Apple 的内容分发网络一次性下载本地 AI 模型权重文件（约 3.4 GB；可选增强版约 5 GB）。该下载不包含也不发送你的任何个人数据；下载完成后，模型推理全程离线运行。若你不使用 AI 功能，应用不会发起该下载。</li>
+        <li><strong>地名解析</strong>：当你使用地点记录（地理围栏）功能并需要将坐标显示为地名时，应用会调用 Apple 的系统定位服务（CLGeocoder）进行反向地理编码。此过程仅向 Apple 传输坐标以换取地名，不包含你的身份信息，解析结果仅保存在设备本地。</li>
+        <li><strong>iCloud 同步（仅在你开启后）</strong>：由 Apple 的 CloudKit 与 iCloud 云盘在你的设备与你自己的 iCloud 账户之间传输数据，见上文「iCloud 同步」。</li>
+    </ol>
 
     <h2>系统权限使用说明</h2>
     <p>本应用可能请求以下系统权限，均为可选功能，你可以选择不启用：</p>
     <table>
         <tr><th>权限</th><th>用途</th><th>数据去向</th></tr>
-        <tr><td>位置</td><td>地理围栏自动打卡、到访地点识别</td><td>仅存设备本地</td></tr>
-        <tr><td>健康数据</td><td>读取步数、睡眠等以生成记录</td><td>仅存设备本地</td></tr>
-        <tr><td>日历与提醒</td><td>读取日历事件和提醒以生成记录</td><td>仅存设备本地</td></tr>
-        <tr><td>运动与健身</td><td>推断通勤方式与活动情境</td><td>仅存设备本地</td></tr>
-        <tr><td>相册</td><td>选取照片/视频作为记录附件</td><td>仅存设备本地</td></tr>
-        <tr><td>麦克风</td><td>录制语音附件</td><td>仅存设备本地</td></tr>
-        <tr><td>通知</td><td>本地提醒（非远程推送）</td><td>仅存设备本地</td></tr>
-        <tr><td>Face ID / Touch ID</td><td>应用锁保护</td><td>仅系统本地验证</td></tr>
+        <tr><td>位置（始终/使用中）</td><td>到达或离开你设置的地点时自动生成记录；可选的到访地点识别</td><td>设备本地；开启 iCloud 同步时同步到你的 iCloud</td></tr>
+        <tr><td>健康数据（HealthKit）</td><td>只读，读取步数以自动生成记录；不写入健康数据</td><td>仅设备本地，<strong>从不存入 iCloud</strong>：开启 iCloud 同步期间暂停健康导入，已导入的健康记录移入本机暂存区、不参与同步，关闭同步后恢复</td></tr>
+        <tr><td>日历与提醒（EventKit）</td><td>读取日历事件和已完成的提醒以自动生成记录</td><td>设备本地；开启 iCloud 同步时，生成的记录同步到你的 iCloud</td></tr>
+        <tr><td>运动与健身（CoreMotion）</td><td>推断通勤方式与活动情境，触发运动状态排程</td><td>设备本地；开启 iCloud 同步时，生成的记录同步到你的 iCloud</td></tr>
+        <tr><td>蓝牙</td><td>检测车载、耳机等设备的连接与断开以自动记录</td><td>设备本地；开启 iCloud 同步时，生成的记录同步到你的 iCloud</td></tr>
+        <tr><td>手记建议（Journaling Suggestions）</td><td>仅导入你在系统选择器中亲自选中的那一条建议</td><td>设备本地；开启 iCloud 同步时，生成的记录同步到你的 iCloud</td></tr>
+        <tr><td>相册</td><td>通过系统照片选择器选取照片/视频作为记录附件</td><td>设备本地；开启 iCloud 同步时存入你的 iCloud 云盘</td></tr>
+        <tr><td>麦克风</td><td>录制语音附件</td><td>设备本地；开启 iCloud 同步时存入你的 iCloud 云盘</td></tr>
+        <tr><td>通知</td><td>本地提醒通知（不发送远程推送；iCloud 同步使用系统静默通知接收变更）</td><td>仅设备本地</td></tr>
+        <tr><td>Face ID / Touch ID</td><td>应用锁保护（可选）</td><td>仅系统本地验证，本应用接触不到生物特征数据</td></tr>
     </table>
+    <p>从「健康」读取的数据不会用于广告或营销，也不会与任何第三方共享。</p>
 
     <h2>AI 功能与内容说明</h2>
-    <p>本应用的 AI 功能均由设备端本地模型生成。AI 生成的内容可能不准确或不完整，请在保存或采信前自行确认；AI 内容不构成医疗、法律、财务或其他专业建议，涉及健康的信息仅用于记录展示。应用已在本地对 AI 输出做出安全约束与过滤以尽量避免不当内容，但无法保证 100% 拦截。</p>
+    <p>本应用的 AI 功能（对话记录、自然语言解析、图文理解、记忆整理、偏离说明、推演叙述与鼓励语生成等）均由设备端本地模型生成。请注意：</p>
+    <ul>
+        <li>AI 生成的内容可能不准确或不完整，请在保存或采信前自行确认；</li>
+        <li>AI 内容与推演结果不构成医疗、法律、财务或其他任何专业建议；涉及健康的信息仅用于记录展示，不应作为诊断或治疗依据；本应用不是医疗器械；</li>
+        <li>应用已在本地对 AI 生成内容做出安全约束与过滤，以尽量避免不当内容，但无法保证 100% 拦截。</li>
+    </ul>
 
     <h2>第三方服务</h2>
     <p>本应用不使用任何第三方分析、广告、崩溃收集或社交分享 SDK。</p>
 
     <h2>开源组件与模型许可</h2>
-    <p>本应用在设备端使用 Gemma（Google，受 Gemma Terms of Use 及 Prohibited Use Policy 约束）、bge-small-zh-v1.5（BAAI，MIT）与 MLX / MLX Swift（Apple，MIT）等模型与开源组件。</p>
+    <ul>
+        <li><strong>Gemma 4</strong>（Google）：用于自然语言与图文理解，按 Apache License 2.0 授权；</li>
+        <li><strong>bge-small-zh-v1.5</strong>（BAAI，MIT 许可）：用于本地语义检索的文本向量化；</li>
+        <li><strong>MLX / MLX Swift</strong>（Apple，MIT 许可）：设备端推理运行时。</li>
+    </ul>
 
-    <h2>数据存储与安全</h2>
-    <p>所有数据仅存储在你的设备本地。你可以通过应用内的备份功能导出数据。删除应用将永久删除所有本地数据。可选的 Face ID / Touch ID 应用锁提供额外安全保护。</p>
+    <h2>数据存储、保留与删除</h2>
+    <ul>
+        <li>所有数据（含记忆）默认仅存储在你的设备本地；开启 iCloud 同步后，同时存储在你自己的 iCloud 中。我们不在任何地方保留你的数据副本；</li>
+        <li>你可以在应用内删除任意记录或记忆（开启同步时，删除会同步到你的其他设备）；</li>
+        <li>你可以通过应用内的备份功能导出数据（完整备份，或 CSV / JSON）；</li>
+        <li>删除应用将永久删除所有本地数据；若曾开启 iCloud 同步，iCloud 中的副本需在系统 iCloud 储存空间管理中删除；</li>
+        <li>可选的 Face ID / Touch ID 应用锁提供额外安全保护。</li>
+    </ul>
+
+    <h2>美国用户与加州隐私权（CCPA）</h2>
+    <p>我们不收集个人信息，因此也不会出售或共享你的个人信息（含《加州消费者隐私法》CCPA 及其修订案 CPRA 所定义的"出售""共享"）。由于我们不持有任何关于你的数据，你的数据完全由你在设备与自己的 iCloud 中控制和删除。</p>
 
     <h2>儿童隐私</h2>
-    <p>本应用不针对 13 岁以下儿童，也不收集任何用户的个人信息。</p>
+    <p>本应用不针对 13 岁以下儿童，也不收集任何用户（包括儿童）的个人信息。</p>
 
     <h2>隐私政策变更</h2>
-    <p>如本隐私政策发生变更，我们将在应用更新说明中告知。</p>
+    <p>如本隐私政策发生变更，我们将更新本页面的"最后更新"日期，并在应用更新说明中告知。</p>
 
     <h2>联系我们</h2>
-    <p>如对本隐私政策有任何疑问，请联系：luluxjj@163.com</p>
+    <p>如对本隐私政策有任何疑问，请联系：<a href="mailto:luluxjj@163.com">luluxjj@163.com</a></p>
+    </section>
 
-    <hr style="margin: 48px 0; border: none; border-top: 1px solid #ddd;">
+    <hr>
 
-    <h1 id="english">Privacy Policy</h1>
-    <p class="update-date">Last Updated: July 5, 2026</p>
+    <!-- ===================== English ===================== -->
+    <section id="en" lang="en">
+    <span id="english"></span>
+    <div class="lang-switch"><a href="#zh" lang="zh-CN">简体中文 ↑</a></div>
+    <h1>Privacy Policy</h1>
+    <p class="update-date">Effective date: October 24, 2026. Last updated: October 24, 2026.</p>
 
     <h2>Overview</h2>
-    <p>"Life Recorder" is a fully offline life recording application. We take your privacy seriously. The App is designed with one principle: your data belongs only to you.</p>
+    <p>Prescia (Chinese name 观复, formerly 挂机人生; "the App") is a personal observation and projection app that runs on your device. The App is designed with one principle: your data belongs only to you.</p>
 
-    <h2>Data Collection</h2>
+    <h2>Data collection</h2>
     <div class="highlight">
-        <strong>The App does not collect, transmit, or store any user data on any server.</strong>
+        <strong>The App does not collect user data, and never transmits or stores any user data on the developer's servers or any third-party server.</strong> There is no account system, no advertising, no tracking, and no developer server.
     </div>
-    <p>All data is stored exclusively on your device's local storage.</p>
+    <p>By default, all data (including your profile, entries, long-term memory, photos, videos, audio and statistics) is stored only on your device.</p>
 
-    <h2>Network Access</h2>
-    <p>All features and data processing are performed locally on-device; the App never uploads your personal data to our servers or any third party. Two network operations may occur, both initiated by system frameworks and neither involving our servers: (1) a one-time download of the on-device AI model weights via Apple's On-Demand Resources when you first enable AI features; and (2) reverse geocoding via Apple's CLGeocoder, which sends only coordinates to Apple to obtain place names when you use geofencing. No personal data is uploaded in either case.</p>
+    <h2>iCloud sync (optional, off by default)</h2>
+    <p>You can turn on iCloud sync in More › Data and backup › iCloud sync to keep your data in sync across your own iPhone and iPad signed in to the same Apple Account. When it is on:</p>
+    <ul>
+        <li>Your profile, entries, trackers, areas, goals, automations, places, encouragements and long-term memory are stored in your own iCloud <strong>private database</strong> (Apple CloudKit). Photo, video, audio and Live Photo files are stored in the App's iCloud Drive container. This data lives only in your Apple Account and is held by Apple under Apple's privacy policy. The developer cannot access it, and it never passes through any developer server.</li>
+        <li>App settings (theme, notifications, app lock), data source permissions, the semantic search index and statistics caches always stay on the device and are never synced.</li>
+        <li>Data read from Apple Health (HealthKit) is <strong>never</strong> stored in iCloud. While sync is on, Health import is paused, and entries already imported from Apple Health are kept in an on-device area that is not synced. When sync is turned off they are shown again and the paused period is filled in from Apple Health.</li>
+        <li>You can turn sync off at any time. Your device keeps all data. Copies already in iCloud are not deleted automatically; you can remove them in Settings › Apple Account › iCloud › Manage Storage.</li>
+    </ul>
 
-    <h2>AI Features &amp; Content</h2>
-    <p>The App's AI features are generated by an on-device local model. AI-generated content may be inaccurate and does not constitute medical, legal, financial, or other professional advice. The App applies on-device safety constraints and filtering to AI output but cannot guarantee 100% prevention.</p>
+    <h2>Long-term memory</h2>
+    <p>On your device, the App derives facts, preferences and habits about you ("memory") from your entries and conversations, and uses them for divergence detection, projections and AI narration. Memory is stored only on your device by default. Only if you turn on iCloud sync is it synced to your own iCloud private database; it is never uploaded to developer servers. You can view, edit or delete any memory, clear all memories, or turn memory learning off at any time. Deleting the App permanently deletes all memory on the device.</p>
 
-    <h2>Third-Party Services</h2>
-    <p>The App does not use any third-party analytics, advertising, crash reporting, or social sharing SDKs.</p>
+    <h2>Divergence detection and projections</h2>
+    <p>Divergence detection and projections (trend, goal odds, habit continuation) are computed on your device using only your own history. Nothing is compared with other people's data, and the results are not uploaded. Projections are statistical estimates and are not professional advice.</p>
 
-    <h2>Open-Source Components &amp; Model Licenses</h2>
-    <p>The App uses Gemma (Google, governed by the Gemma Terms of Use and Prohibited Use Policy), bge-small-zh-v1.5 (BAAI, MIT), and MLX / MLX Swift (Apple, MIT) on-device.</p>
+    <h2>Network access</h2>
+    <p>All features (including AI chat logging, natural-language parsing, memory, divergence detection, projections, statistics and semantic search) and all data processing run locally on your device. The App never uploads your personal data to our servers or any third party.</p>
+    <p>The following network operations may occur. All are initiated by system frameworks; none involve our servers or are used for analytics or tracking:</p>
+    <ol>
+        <li><strong>AI model download</strong>: the first time you turn on on-device AI, the App downloads the model weights once through Apple's On-Demand Resources from Apple's content delivery network (about 3.4 GB; the optional enhanced model is about 5 GB). The download contains and sends no personal data. After it completes, all model inference runs offline. If you don't use AI features, the download never happens.</li>
+        <li><strong>Reverse geocoding</strong>: when you use places (geofencing) and coordinates need to be shown as a place name, the App calls Apple's system location service (CLGeocoder). Only coordinates are sent to Apple in exchange for a place name. No identity information is included, and the result is stored only on your device.</li>
+        <li><strong>iCloud sync (only if you turn it on)</strong>: Apple CloudKit and iCloud Drive transfer data between your devices and your own iCloud account. See "iCloud sync" above.</li>
+    </ol>
+
+    <h2>System permissions</h2>
+    <p>The App may request the following permissions. All are optional.</p>
+    <table>
+        <tr><th>Permission</th><th>Purpose</th><th>Where the data goes</th></tr>
+        <tr><td>Location (Always / While Using)</td><td>Log an entry when you arrive at or leave places you set up; optional visit detection</td><td>On device; your iCloud if sync is on</td></tr>
+        <tr><td>Apple Health (HealthKit)</td><td>Read-only step count for automatic entries. The App writes nothing to Health</td><td>On device only, <strong>never in iCloud</strong>. While sync is on, Health import pauses and imported Health entries stay in an on-device area that is not synced</td></tr>
+        <tr><td>Calendars and Reminders (EventKit)</td><td>Read calendar events and completed reminders for automatic entries</td><td>On device; resulting entries in your iCloud if sync is on</td></tr>
+        <tr><td>Motion &amp; Fitness (CoreMotion)</td><td>Infer commute and activity context; motion automations</td><td>On device; resulting entries in your iCloud if sync is on</td></tr>
+        <tr><td>Bluetooth</td><td>Detect when devices such as your car or headphones connect or disconnect</td><td>On device; resulting entries in your iCloud if sync is on</td></tr>
+        <tr><td>Journaling Suggestions</td><td>Import only the suggestion you pick in Apple's picker</td><td>On device; resulting entries in your iCloud if sync is on</td></tr>
+        <tr><td>Photos</td><td>Pick photos and videos as attachments with the system photo picker</td><td>On device; your iCloud Drive if sync is on</td></tr>
+        <tr><td>Microphone</td><td>Record voice notes</td><td>On device; your iCloud Drive if sync is on</td></tr>
+        <tr><td>Notifications</td><td>Local reminders. No remote push messages; iCloud sync uses silent system notifications to receive changes</td><td>On device only</td></tr>
+        <tr><td>Face ID / Touch ID</td><td>Optional app lock</td><td>Verified by the system; the App never receives biometric data</td></tr>
+    </table>
+    <p>Data read from Apple Health is never used for advertising or marketing and is never shared with third parties.</p>
+
+    <h2>AI features and content</h2>
+    <p>The App's AI features (chat logging, natural-language parsing, image understanding, memory, divergence explanations, projection narration and encouragement writing) are generated by an on-device model. Please note:</p>
+    <ul>
+        <li>AI-generated content may be inaccurate or incomplete. Check it before saving or relying on it.</li>
+        <li>AI content and projections are not medical, legal, financial or any other professional advice. Health-related information is shown for record-keeping only and must not be used for diagnosis or treatment. The App is not a medical device.</li>
+        <li>The App applies on-device safety constraints and filtering to AI output to reduce inappropriate content, but cannot guarantee that all of it is blocked.</li>
+    </ul>
+
+    <h2>Third-party services</h2>
+    <p>The App does not use any third-party analytics, advertising, crash reporting or social sharing SDKs.</p>
+
+    <h2>Open-source components and model licenses</h2>
+    <ul>
+        <li><strong>Gemma 4</strong> (Google): natural-language and image understanding, licensed under the Apache License 2.0.</li>
+        <li><strong>bge-small-zh-v1.5</strong> (BAAI, MIT license): text embeddings for on-device semantic search.</li>
+        <li><strong>MLX / MLX Swift</strong> (Apple, MIT license): the on-device inference runtime.</li>
+    </ul>
+
+    <h2>Data storage, retention and deletion</h2>
+    <ul>
+        <li>All data, including memory, is stored only on your device by default. With iCloud sync on, it is also stored in your own iCloud. We keep no copy of your data anywhere.</li>
+        <li>You can delete any entry or memory in the App (with sync on, deletions sync to your other devices).</li>
+        <li>You can export your data with the in-app backup (full backup, or CSV / JSON).</li>
+        <li>Deleting the App permanently deletes all local data. If you used iCloud sync, remove the iCloud copy in your iCloud storage settings.</li>
+        <li>An optional Face ID / Touch ID app lock adds protection.</li>
+    </ul>
+
+    <h2>U.S. users and California privacy rights (CCPA)</h2>
+    <p>We do not collect personal information, so we do not sell or share it, including as "sell" and "share" are defined by the California Consumer Privacy Act as amended by the CPRA. Because we hold no data about you, you control and delete your data yourself, on your device and in your own iCloud.</p>
+
+    <h2>Children's privacy</h2>
+    <p>The App is not directed to children under 13 and does not collect personal information from anyone, including children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, we will update the "Last updated" date on this page and mention the change in the App's release notes.</p>
 
     <h2>Contact</h2>
-    <p>For questions about this privacy policy, please contact: (your email address)</p>
+    <p>For questions about this privacy policy, contact: <a href="mailto:luluxjj@163.com">luluxjj@163.com</a></p>
+    </section>
 </body>
 </html>
