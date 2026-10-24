@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shotnest — Support &amp; Help</title>
+  <meta name="description" content="Shotnest support and FAQ. Private AI photo search, cleanup, and Pro Select, all on-device.">
+  <style>
+    :root {
+      --bg: #0F0F14;
+      --surface: #1A1B2E;
+      --accent: #C9A87C;
+      --purple: #9B8FC4;
+      --text: #E8E6F0;
+      --text2: #A0A0B8;
+      --border: rgba(255,255,255,0.08);
+      --success: #7BAE8E;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, "SF Pro Text", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.75; min-height: 100vh;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+    .header { text-align: center; margin-bottom: 48px; }
+    .header .icon {
+      width: 80px; height: 80px; border-radius: 18px;
+      background: linear-gradient(135deg, var(--purple), var(--accent));
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 36px; margin-bottom: 16px; box-shadow: 0 8px 32px rgba(155,143,196,0.25);
+    }
+    .header h1 { font-size: 32px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 4px; }
+    .header .subtitle { color: var(--text2); font-size: 15px; }
+    h2 { font-size: 18px; font-weight: 600; color: var(--accent); margin: 40px 0 16px; }
+    .card {
+      background: var(--surface); border-radius: 16px; padding: 24px; margin-bottom: 16px;
+      border: 1px solid var(--border); transition: border-color 0.2s;
+    }
+    .card:hover { border-color: rgba(155,143,196,0.2); }
+    .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+    .card p { font-size: 14px; color: var(--text2); margin-bottom: 0; }
+    .faq-item {
+      background: var(--surface); border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;
+      border: 1px solid var(--border);
+    }
+    .faq-item .question { font-weight: 600; font-size: 15px; color: var(--text); margin-bottom: 8px; }
+    .faq-item .answer { font-size: 14px; color: var(--text2); }
+    .contact-box {
+      background: linear-gradient(135deg, rgba(155,143,196,0.1), rgba(201,168,124,0.1));
+      border: 1px solid rgba(155,143,196,0.2); border-radius: 16px; padding: 32px;
+      text-align: center; margin-top: 40px;
+    }
+    .contact-box .email {
+      display: inline-block; background: var(--purple); color: white; padding: 10px 28px;
+      border-radius: 24px; font-size: 15px; font-weight: 600; text-decoration: none;
+      margin-top: 12px; transition: opacity 0.2s;
+    }
+    .contact-box .email:hover { opacity: 0.85; text-decoration: none; }
+    a { color: var(--purple); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    footer {
+      margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border);
+      text-align: center; font-size: 13px; color: var(--text2); opacity: 0.7;
+    }
+    footer a { color: var(--text2); }
+    @media (prefers-color-scheme: light) {
+      :root { --bg: #FAFAFA; --surface: #FFFFFF; --text: #1d1d1f; --text2: #3a3a3c; --border: rgba(0,0,0,0.08); }
+      .header .icon { box-shadow: 0 4px 16px rgba(155,143,196,0.2); }
+      .contact-box { background: linear-gradient(135deg, rgba(155,143,196,0.05), rgba(201,168,124,0.05)); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icon">📷</div>
+      <h1>Shotnest Support</h1>
+      <p class="subtitle">Private AI photo search &amp; cleanup</p>
+    </div>
+
+    <h2>✨ What Shotnest does</h2>
+
+    <div class="card">
+      <h3>🔍 Natural-language search</h3>
+      <p>Type what you remember, like "dog at the beach" or "birthday cake", in English or Chinese. A built-in AI model matches your words to your photos, right on your device. No tagging needed.</p>
+    </div>
+
+    <div class="card">
+      <h3>📝 Text in photos</h3>
+      <p>Shotnest reads the text in receipts, tickets, notes, and screenshots (on-device OCR), so you can find them by the words they contain.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 AI Deep Search (optional)</h3>
+      <p>Download an on-device AI model that describes each photo in detail for harder searches. It runs fully offline after download.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧹 Cleanup &amp; Pro Select</h3>
+      <p>Clear similar shots, bursts, screenshots, and large files. Pro Select helps you pick the best shots from a trip or photo shoot with Keep / Maybe / Reject.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔒 Private by design</h3>
+      <p>All AI runs on your device. Your photos are never uploaded. No account, no ads, no tracking. See our <a href="../privacy/">Privacy Policy</a>.</p>
+    </div>
+
+    <h2>❓ Frequently asked questions</h2>
+
+    <div class="faq-item">
+      <div class="question">Does Shotnest need an internet connection?</div>
+      <div class="answer">No. Search, text recognition, and cleanup work offline. You only need a connection to make purchases, to download the optional AI Deep Search model, to look up place names for location features, and for iOS to fetch iCloud Photos originals.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Why don't all my photos show up in search yet?</div>
+      <div class="answer">Shotnest builds its search index on your device the first time, which can take a while for large libraries. Keep the app open, or plug in your iPhone so iOS lets indexing continue in the background. Photos stored only in iCloud (with "Optimize iPhone Storage" on) may be indexed later, once a local preview is available.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">How big is the AI Deep Search model, and which devices support it?</div>
+      <div class="answer">Three sizes are available: about 2.2 GB, 3.4 GB, and 5 GB. They need an iPhone or iPad with at least 6 GB of memory (8 GB for the largest), for example iPhone 12 Pro, iPhone 13 Pro, iPhone 14 and later. Use Wi-Fi and keep the app open during download. You can delete the model at any time in Settings to free up space. The regular search model is built in and works on every supported device.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Will Shotnest delete photos without asking?</div>
+      <div class="answer">Never. Every deletion asks for iOS confirmation, and deleted photos go to the Recently Deleted album in the Photos app, where you can recover them for 30 days. You can also protect photos so they are never suggested for cleanup.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">What's free and what's included in Pro?</div>
+      <div class="answer">New users get 3 days of full access. After that, cleanup tools, library browsing, 2 collage layouts, and 1 Pro Select project remain free. Shotnest Pro unlocks natural-language and text search, AI Deep Search, all collage layouts, unlimited Pro Select projects, browse by location, batch tags, and watermarks. Pro is available monthly, yearly, or as a one-time lifetime purchase.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">How do I restore my purchase on a new device?</div>
+      <div class="answer">Sign in with the same Apple Account, open Shotnest → Profile → Settings → Pro, and tap "Restore Purchases" on the Pro screen.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">How do I cancel my subscription?</div>
+      <div class="answer">Open iOS Settings → tap your name → Subscriptions → Shotnest Pro → Cancel Subscription. Cancel at least 24 hours before the renewal date to avoid being charged for the next period. For refunds, visit <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a>. Apple handles all payments.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">Shotnest says it can't access my photos.</div>
+      <div class="answer">Go to iOS Settings → Privacy &amp; Security → Photos → Shotnest and choose "Full Access". With "Limited Access", Shotnest can only search and clean the photos you selected.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="question">How do I change the app language?</div>
+      <div class="answer">Shotnest follows your device language. To choose a language just for Shotnest, go to iOS Settings → Apps → Shotnest → Language.</div>
+    </div>
+
+    <div class="contact-box">
+      <h2 style="margin-top: 0; color: var(--text);">📬 Still need help?</h2>
+      <p style="color: var(--text2); font-size: 14px;">Email us with your device model, iOS version, and a short description of the issue.<br>We usually reply within 24 hours.</p>
+      <a href="mailto:luluxjj@163.com?subject=Shotnest%20Support" class="email">📧 luluxjj@163.com</a>
+    </div>
+
+    <footer>
+      <p>© 2026 luluxjj. Shotnest (映集). All rights reserved.</p>
+      <p><a href="../privacy/">Privacy Policy</a> · <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a> · <a href="../../yingji_privacy_policy.html">中文隐私政策</a></p>
+    </footer>
+  </div>
+</body>
+</html>
